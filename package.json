@@ -10,5 +10,8 @@
     "ztm-planets-project"
   ],
   "author": "Mitesh Prajapati",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^3.0.3"
+  }
 }
