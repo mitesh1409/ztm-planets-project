@@ -3,9 +3,11 @@ import * as fs from 'node:fs';
 
 const records = [];
 
-// Here we are using built-in File System module for the Node.js to read the data file.
-// It reads raw data of the file, it does not parse it.
 fs.createReadStream('./data/kepler_data.csv')
+    .pipe(parse({
+        columns: true,
+        comment: '#',
+    }))
     .on('data', (data) => {
         records.push(data);
     })
@@ -15,5 +17,5 @@ fs.createReadStream('./data/kepler_data.csv')
     .on('end', () => {
         console.log('Done with reading file!');
         console.log(`Found ${records.length} records`);
-        console.log('records', records);
+        // console.log('records', records);
     });
