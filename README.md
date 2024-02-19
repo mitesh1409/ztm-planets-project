@@ -8,4 +8,5 @@ Planets Project from ZTM Course
 | Feature Development | feat |
 | Tasks/Chores | chore |
 | Bug Fix | fix |
+| Refactor | refactor |
 | Test Case | test |
